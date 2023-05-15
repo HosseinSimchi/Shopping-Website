@@ -1,12 +1,14 @@
 import React from 'react';
 
+import "./global.css";
+
 export const metadata = {
-  title: 'Shopping Website',
+  title: 'فروشگاه اینترنتی',
 }
 
 const RootLayout = ({children}) => {
   return (
-    <html lang="en">
+    <html lang="fa">
       <body>{children}</body>
     </html>
   )
