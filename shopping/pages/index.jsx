@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Header, Products} from "./importedFiles";
+import {Header} from "./importedFiles";
 
 const Home = () => {
 
@@ -9,7 +9,6 @@ const Home = () => {
   return (
     <>
       <Header topic={topic} content={content}/>
-      <Products />
     </>
   )
 }
