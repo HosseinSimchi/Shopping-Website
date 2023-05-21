@@ -1,5 +1,3 @@
-'use client'
-
 import React from "react";
 
 import Link from "next/link";
@@ -11,28 +9,40 @@ const Header = ({topic, content}) => {
   return (
     <>
       <HeaderTag>
-        <Nav>
-          <Container>
-              <Navbar>
-                  <NavbarRight>
-                    <NavbarRightUl>
-                      <NavbarRightLi>صفحه اصلی</NavbarRightLi>
-                      <NavbarRightLi>درباره ما</NavbarRightLi>
-                      <NavbarRightLi>تماس با ما</NavbarRightLi>
-                    </NavbarRightUl>
-                  </NavbarRight>
-                  <NavbarLeft>
-                    <NavbarLeftUl>
-                      <NavbarLeftLi><i class="fas fa-phone"></i></NavbarLeftLi>
-                      <NavbarLeftLi><i class="fa fa-telegram"></i></NavbarLeftLi>
-                      <NavbarLeftLi><i class="fa fa-instagram"></i></NavbarLeftLi>
-                      <NavbarLeftLi><i class="fa fa-envelope"></i></NavbarLeftLi>
-                    </NavbarLeftUl>
-                    <Img src="Img/logo.png" alt="logoImg" />
-                  </NavbarLeft>
-              </Navbar>
-          </Container>
-        </Nav>
+        <Transparent>
+            <Nav>
+              <Container>
+                  <Navbar>
+                      <NavbarRight>
+                        <NavbarRightUl>
+                          <Link href="/" style={{textDecoration:'none', color:"black"}}>
+                            <NavbarRightLi>صفحه اصلی</NavbarRightLi>
+                          </Link>
+                          <Link href="/about" style={{textDecoration:'none', color:"black"}}>
+                            <NavbarRightLi>درباره ما</NavbarRightLi>
+                          </Link>
+                          <Link href="/contact" style={{textDecoration:'none', color:"black"}}>
+                            <NavbarRightLi>تماس با ما</NavbarRightLi>
+                          </Link>
+                        </NavbarRightUl>
+                      </NavbarRight>
+                      <NavbarLeft>
+                        <NavbarLeftUl>
+                          <NavbarLeftLi><i class="fas fa-phone"></i></NavbarLeftLi>
+                          <NavbarLeftLi><i class="fa fa-telegram"></i></NavbarLeftLi>
+                          <NavbarLeftLi><i class="fa fa-instagram"></i></NavbarLeftLi>
+                          <NavbarLeftLi><i class="fa fa-envelope"></i></NavbarLeftLi>
+                        </NavbarLeftUl>
+                        <Img src="Img/logo.png" alt="logoImg" />
+                      </NavbarLeft>
+                  </Navbar>
+                  <DescHeader>
+                    <H>{topic}</H>
+                    <P>{content}</P>
+                  </DescHeader>
+              </Container>
+            </Nav>
+        </Transparent>
       </HeaderTag>
     </>
   )
@@ -43,12 +53,22 @@ const HeaderTag = styled.header`
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
+  position: relative;
 `
 
+const Transparent = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255,255,255,.8);
+`
 const Nav = styled.nav`
   width: 100%;
   height: 70px;
+  background-color: rgba(0,0,0,.1);
 `
 
 const Container = styled.div`
@@ -66,7 +86,13 @@ const NavbarRightUl = styled.ul`
     margin : 0 5px 0 5px;
 `
 const NavbarRightLi = styled.li`
-  margin : 0 10px;
+  margin : 0 15px;
+  font-size : 20px;
+  font-weight : bold;
+  cursor : pointer;
+  &:hover {
+    opacity : 0.4;
+  }
 `
 
 const NavbarLeft = styled.div`
@@ -81,7 +107,11 @@ const NavbarLeftUl = styled.ul`
 `
 
 const NavbarLeftLi = styled.li`
-  margin : 0 3px;
+  margin : 0 7px;
+  cursor : pointer;
+  &:hover {
+    opacity : 0.4;
+  }
 `
 
 
@@ -93,7 +123,31 @@ const Navbar = styled.div`
 `
 
 const Img = styled.img`
-  width : 40px;
+  width : 45px;
+  cursor : pointer;
+  &:hover {
+    opacity : 0.4;
+  }
+`
+
+const DescHeader = styled.div`
+  position : absolute;
+  top : 40%;
+  right : 0;
+  left : 0;
+  text-align : center;
+`
+
+const H = styled.h1`
+  font-size :35px;
+  margin-bottom : 21px;
+  opacity : 0.7;
+`
+
+const P = styled.p`
+  font-size :20px;
+  font-weight : bold;
+  opacity : 0.7;
 `
 
 export default Header;

@@ -1,14 +1,15 @@
 import React from 'react';
 
-import {Header} from "./importedFiles";
+import {Header, Products} from "./importedFiles";
 
 const Home = () => {
 
-  const topic = "فروشگاه خرید انواع پاکت های مناسبتی";
-  const content = "در فروشگاه اینترنتی ما می توانید در کمترین زمان ممکن و با بهترین قیمت، قشنگترین پاکت رو بخرید"
+  const topic = "فروشگاه خرید لباس زنانه";
+  const content = "در فروشگاه اینترنتی ما می توانید در کمترین زمان ممکن و با بهترین قیمت، قشنگترین لباس را بخرید"
   return (
     <>
       <Header topic={topic} content={content}/>
+      <Products />
     </>
   )
 }
