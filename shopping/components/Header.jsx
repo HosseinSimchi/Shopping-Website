@@ -18,6 +18,9 @@ const Header = ({topic, content}) => {
                           <Link href="/" style={{textDecoration:'none', color:"black"}}>
                             <NavbarRightLi>صفحه اصلی</NavbarRightLi>
                           </Link>
+                          <Link href="/products" style={{textDecoration:'none', color:"black"}}>
+                            <NavbarRightLi> فروشگاه </NavbarRightLi>
+                          </Link>
                           <Link href="/about" style={{textDecoration:'none', color:"black"}}>
                             <NavbarRightLi>درباره ما</NavbarRightLi>
                           </Link>
