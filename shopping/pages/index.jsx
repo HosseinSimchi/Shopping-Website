@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react';
 
 import {Header, Product} from "./importedFiles";
