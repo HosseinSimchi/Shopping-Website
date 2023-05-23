@@ -1,5 +1,3 @@
-"use client"
-
 import React from "react";
 
 import Link from "next/link";
@@ -33,10 +31,10 @@ const Header = ({topic, content}) => {
                       </NavbarRight>
                       <NavbarLeft>
                         <NavbarLeftUl>
-                          <NavbarLeftLi><i className="fas fa-phone"></i></NavbarLeftLi>
-                          <NavbarLeftLi><i className="fa fa-telegram"></i></NavbarLeftLi>
-                          <NavbarLeftLi><i className="fa fa-instagram"></i></NavbarLeftLi>
-                          <NavbarLeftLi><i className="fa fa-envelope"></i></NavbarLeftLi>
+                          <NavbarLeftLi><I className="fas fa-phone"></I></NavbarLeftLi>
+                          <NavbarLeftLi><I className="fa fa-telegram"></I></NavbarLeftLi>
+                          <NavbarLeftLi><I className="fa fa-instagram"></I></NavbarLeftLi>
+                          <NavbarLeftLi><I className="fa fa-envelope"></I></NavbarLeftLi>
                         </NavbarLeftUl>
                         <Img src="Img/logo.png" alt="logoImg" />
                       </NavbarLeft>
@@ -154,6 +152,6 @@ const P = styled.p`
   font-weight : bold;
   opacity : 0.7;
 `
-
+const I = styled.i``
 export default Header;
 
