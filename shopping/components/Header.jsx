@@ -1,3 +1,5 @@
+'use client';
+
 import React from "react";
 
 import Link from "next/link";
@@ -31,10 +33,10 @@ const Header = ({topic, content}) => {
                       </NavbarRight>
                       <NavbarLeft>
                         <NavbarLeftUl>
-                          <NavbarLeftLi><i class="fas fa-phone"></i></NavbarLeftLi>
-                          <NavbarLeftLi><i class="fa fa-telegram"></i></NavbarLeftLi>
-                          <NavbarLeftLi><i class="fa fa-instagram"></i></NavbarLeftLi>
-                          <NavbarLeftLi><i class="fa fa-envelope"></i></NavbarLeftLi>
+                          <NavbarLeftLi><i className="fas fa-phone"></i></NavbarLeftLi>
+                          <NavbarLeftLi><i className="fa fa-telegram"></i></NavbarLeftLi>
+                          <NavbarLeftLi><i className="fa fa-instagram"></i></NavbarLeftLi>
+                          <NavbarLeftLi><i className="fa fa-envelope"></i></NavbarLeftLi>
                         </NavbarLeftUl>
                         <Img src="Img/logo.png" alt="logoImg" />
                       </NavbarLeft>

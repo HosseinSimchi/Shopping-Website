@@ -1,3 +1,5 @@
+'use client';
+
 import React from "react"
 
 import styled from '@emotion/styled';
@@ -24,29 +26,29 @@ const Products = () => {
                       <Li>
                         <Link href="/products/product/1" style={{textDecoration:'none', color:"black"}}>
                             <Img src="Img/pr1.jpg" />
-                            <h4>ست بافتنی زنانه</h4>
-                            <p>2 میلیون تومان </p>
+                            <H>ست بافتنی زنانه</H>
+                            <P>2 میلیون تومان </P>
                         </Link>
                       </Li>
                       <Li>
                         <Link href="/products/product/2" style={{textDecoration:'none', color:"black"}}>
                           <Img src="Img/pr2.jpg" />
-                          <h4>ست خانگی زنانه</h4>
-                          <p>1 میلیون تومان</p>
+                          <H>ست خانگی زنانه</H>
+                          <P>1 میلیون تومان</P>
                         </Link>
                       </Li>
                       <Li>
                         <Link href="/products/product/3" style={{textDecoration:'none', color:"black"}}>
                           <Img src="Img/pr3.jpg" />
-                          <h4>ست دخترانه</h4>
-                          <p>1 میلیون تومان</p>
+                          <H>ست دخترانه</H>
+                          <P>1 میلیون تومان</P>
                         </Link>
                       </Li>
                       <Li>
                         <Link href="/products/product/4" style={{textDecoration:'none', color:"black"}}>
                           <Img src="Img/pr4.jpg" />
-                          <h4>ست دخترانه بزرگسال</h4>
-                          <p>2 میلیون تومان</p>
+                          <H>ست دخترانه بزرگسال</H>
+                          <P>2 میلیون تومان</P>
                         </Link>
                       </Li>
                     </Ul>
@@ -145,5 +147,8 @@ const HSectionRight = styled.h1`
   font-size : 30px;
   font-weight : bold;
 `
+
+const H = styled.h4``;
+const P = styled.p``;
 export default Products;
 

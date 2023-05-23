@@ -1,10 +1,12 @@
+'use client';
+
 import React from "react";
 
-const ProductDetails = () => {
 
+const ProductDetails = () => {
   return (
     <>
-      <h1> Details of Product</h1>
+      <h1> hello</h1>
     </>
   )
 }
