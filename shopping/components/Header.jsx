@@ -36,7 +36,7 @@ const Header = ({topic, content}) => {
                           <NavbarLeftLi><I className="fa fa-instagram"></I></NavbarLeftLi>
                           <NavbarLeftLi><I className="fa fa-envelope"></I></NavbarLeftLi>
                         </NavbarLeftUl>
-                        <Img src="Img/logo.png" alt="logoImg" />
+                        <Img src="/Img/logo.png" alt="logoImg" />
                       </NavbarLeft>
                   </Navbar>
                   <DescHeader>

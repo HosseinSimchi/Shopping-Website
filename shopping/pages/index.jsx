@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Header, Product} from "./importedFiles";
+import {Header, Product, Footer} from "./importedFiles";
 
 const Home = () => {
 
@@ -10,6 +10,7 @@ const Home = () => {
     <>
       <Header topic={topic} content={content}/>
       <Product />
+      <Footer />
     </>
   )
 }

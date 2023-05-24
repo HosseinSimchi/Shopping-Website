@@ -85,6 +85,7 @@ const SectionRight = styled.div`
   background-image : url("Img/about1.jpg");
   background-repeat : no-repeat;
   background-size : cover;
+  background-attachment : fixed;
   position: absolute;
   top : 0;
   right:0;

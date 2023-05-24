@@ -2,13 +2,16 @@ import React from "react";
 
 import { useRouter } from "next/router";
 
+import {Header, Footer} from '../../importedFiles';
+
 const ProductDetails = () => {
   const router = useRouter();
   const {id} = router.query;
   
   return (
     <>
-      <h1>{id}</h1>
+      <Header topic="f" content="f" />
+      <Footer />
     </>
   )
 }
