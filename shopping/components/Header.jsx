@@ -52,7 +52,7 @@ const Header = ({topic, content}) => {
 }
 
 const HeaderTag = styled.header`
-  background-image: url("Img/header.jpg");
+  background-image: url("/Img/header.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
