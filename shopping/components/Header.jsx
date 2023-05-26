@@ -16,16 +16,16 @@ const Header = ({topic, content}) => {
                       <NavbarRight>
                         <NavbarRightUl>
                           <Link href="/" style={{textDecoration:'none', color:"black"}}>
-                            <NavbarRightLi>صفحه اصلی</NavbarRightLi>
+                            <NavbarRightLi className="navbarRight">صفحه اصلی</NavbarRightLi>
                           </Link>
                           <Link href="/products" style={{textDecoration:'none', color:"black"}}>
-                            <NavbarRightLi> فروشگاه </NavbarRightLi>
+                            <NavbarRightLi className="navbarRight"> فروشگاه </NavbarRightLi>
                           </Link>
                           <Link href="/about" style={{textDecoration:'none', color:"black"}}>
-                            <NavbarRightLi>درباره ما</NavbarRightLi>
+                            <NavbarRightLi className="navbarRight">درباره ما</NavbarRightLi>
                           </Link>
                           <Link href="/contact" style={{textDecoration:'none', color:"black"}}>
-                            <NavbarRightLi>تماس با ما</NavbarRightLi>
+                            <NavbarRightLi className="navbarRight">تماس با ما</NavbarRightLi>
                           </Link>
                         </NavbarRightUl>
                       </NavbarRight>
@@ -76,7 +76,7 @@ const Nav = styled.nav`
 
 const Container = styled.div`
   display : flex;
-  width : 900px;
+  width : 80%;
   height : 100%;
   margin : auto;
 `
@@ -96,6 +96,18 @@ const NavbarRightLi = styled.li`
   &:hover {
     opacity : 0.4;
   }
+  @media screen and (max-width: 768px) {
+    font-size : 15px;
+    margin : 0 10px;
+  }
+  @media screen and (max-width: 576px) {
+    font-size : 10px;
+    margin : 0 5px;
+  }
+  @media screen and (max-width: 400px) {
+    font-size : 6px;
+    margin : 0 2px;
+  }
 `
 
 const NavbarLeft = styled.div`
@@ -107,6 +119,15 @@ const NavbarLeftUl = styled.ul`
   display : flex;
   list-style : none;
   margin : 0 30px;
+  @media screen and (max-width: 768px) {
+    margin : 0 25px;
+  }
+  @media screen and (max-width: 576px) {
+    margin : 0 20px;
+  }
+  @media screen and (max-width: 400px) {
+    margin : 0 5px;
+  }
 `
 
 const NavbarLeftLi = styled.li`
@@ -139,18 +160,25 @@ const DescHeader = styled.div`
   right : 0;
   left : 0;
   text-align : center;
+
 `
 
 const H = styled.h1`
   font-size :35px;
   margin-bottom : 21px;
   opacity : 0.7;
+  @media screen and (max-width: 768px) {
+    font-size : 30px;
+  }
 `
 
 const P = styled.p`
   font-size :20px;
   font-weight : bold;
   opacity : 0.7;
+  @media screen and (max-width: 768px) {
+    font-size : 15px;
+  }
 `
 const I = styled.i``
 export default Header;

@@ -33,10 +33,14 @@ const Details = styled.div`
   margin-top: 10vh;
   width : 100%;
   height : 800px;
+  @media screen and (max-width: 768px) {
+    height : 700px;
+  }
+
 `
 
 const Container = styled.div`
-  width : 900px;
+  width : 80%;
   margin : auto;
   height : 100%;
 `
@@ -50,6 +54,14 @@ const Card = styled.div`
   background-color: rgba(0,0,0,0.1);
   display : flex;
   flex-direction : column;
+  @media screen and (max-width: 768px) {
+    width : 350px;
+    height : 80%;
+  }
+  @media screen and (max-width: 400px) {
+    width : 300px;
+    height : 70%;
+  }
 `
 
 const Img = styled.img`
@@ -57,11 +69,18 @@ const Img = styled.img`
   height : 300px;
   border-radius : 8px;
   margin : 10px auto;
+  @media screen and (max-width: 400px) {
+    width : 250px;
+    height : 250px;
+  }
 `
 
 const H = styled.h2`
   margin : 20px auto;
   font-size : 27px;
+  @media screen and (max-width: 400px) {
+    margin : 15px auto;
+  }
 `
 
 const P = styled.p`

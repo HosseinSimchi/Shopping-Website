@@ -36,7 +36,7 @@ const FooterSection = styled.section`
 `
 const Container = styled.div`
   position: relative;
-  width : 900px;
+  width : 80%;
   margin: auto;
   height : 100%;
   display: flex;
@@ -51,9 +51,15 @@ const TextSection = styled.div`
 const H = styled.h4`
   font-size : 30px;
   margin-bottom :6px;
+  @media screen and (max-width: 400px) {
+    font-size : 20px;
+  }
 `
 const P = styled.p`
   font-size :20px;
+  @media screen and (max-width: 400px) {
+    font-size : 15px;
+  }
 `
 const Social = styled.div`
   width : 100%;

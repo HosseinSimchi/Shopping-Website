@@ -30,17 +30,29 @@ const ProductsSection = styled.section`
   margin-top : 10vh;
   width : 100%;
   height : 750px;
-  background-color : rgba(0,0,0,0.1)
+  background-color : rgba(0,0,0,0.1);
+  @media screen and (max-width: 576px) {
+    height : 600px;
+  }
+  @media screen and (max-width: 400px) {
+    height : 450px;
+  }
 `
 
 const Container = styled.div`
   padding-top : 10vh;
-  width : 900px;
+  width : 80%;
   height: 100%;
   margin : 70px auto;
   display : flex;
   flex-wrap : wrap;
   justify-content : center;
+  @media screen and (max-width: 576px) {
+    margin : 50px auto;
+  }
+  @media screen and (max-width: 400px) {
+    margin : 30px auto;
+  }
 `
 
 const Card = styled.div`
@@ -58,18 +70,74 @@ const Card = styled.div`
     height : 350px;
   }
   cursor :pointer;
+
+  @media screen and (max-width: 768px) {
+    width : 20%;
+    height : 260px;
+    &:hover{
+      width : 150px;
+      height : 270px;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    width : 20%;
+    height : 210px;
+    &:hover{
+      width : 100px;
+      height : 230px;
+    }
+  }
+  @media screen and (max-width: 400px) {
+    width : 25%;
+    height : 120px;
+    &:hover{
+      width : 85px;
+      height : 130px;
+    }
+  }
 `
 const Img = styled.img `
   width : 100%;
   height : 60%;
   border-radius : 12px;
+  @media screen and (max-width: 768px) {
+    width : 80%;
+    height : 40%;
+    border-radius : 10px;
+  }
+  @media screen and (max-width: 400px) {
+    width : 60%;
+    height : 20%;
+    border-radius : 6px;
+  }
 `
 const H = styled.h4`
   font-size :14px;
+  @media screen and (max-width: 768px) {
+    font-size :10px;
+  }
+  @media screen and (max-width: 576px) {
+    font-size : 8px;
+  }
+  @media screen and (max-width: 400px) {
+    font-size : 6px;
+  }
 `
 const P = styled.p`
   font-size : 10px;
   margin-bottom:15px;
+  @media screen and (max-width: 992px) {
+    font-size :8px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size :8px;
+  }
+  @media screen and (max-width: 576px) {
+    font-size : 6px;
+  }
+  @media screen and (max-width: 400px) {
+    font-size : 4px;
+  }
 `
 
 const A = styled.a`
@@ -82,6 +150,13 @@ const A = styled.a`
   padding : 5px;
   &:hover {
     opacity : 0.6;
+  }
+  @media screen and (max-width: 576px) {
+    font-size : 8px;
+  }
+  @media screen and (max-width: 400px) {
+    font-size : 6px;
+    padding : 2px;
   }
 `
 export default Products;

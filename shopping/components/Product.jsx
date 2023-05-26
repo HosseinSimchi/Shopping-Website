@@ -65,7 +65,7 @@ const Section = styled.section`
 
 const Container = styled.div`
   display : flex;
-  width : 900px;
+  width : 80%;
   height : 100%;
   margin : auto;
   justify-content : space-between;
@@ -91,6 +91,10 @@ const SectionRight = styled.div`
   right:0;
   bottom:0;
   left:40%;
+  @media screen and (max-width: 400px) {
+    top : 10%;
+    bottom:10%;
+  }
 `
 const SectionLeft = styled.div`
   width : 40%;
@@ -120,6 +124,10 @@ const Li = styled.li`
 const Img = styled.img`
   width : 100px;
   height : 100px;
+  @media screen and (max-width: 400px) {
+    width : 70px;
+    height : 70px;
+  }
 `
 const A = styled.a`
   text-decoration : none;
@@ -136,18 +144,32 @@ const A = styled.a`
 const PSectionRight = styled.p`
   margin-bottom :20px;
   font-size : 20px;
-  width: 290px;
+  width: 70%;
   line-height : 35px;
   margin: 12px auto;
+  @media screen and (max-width: 400px) {
+    font-size : 10px;
+  }
 `
 
 const HSectionRight = styled.h1`
   margin-top : 160px;
   font-size : 30px;
   font-weight : bold;
+  @media screen and (max-width: 400px) {
+    font-size : 20px;
+  }
 `
 
-const H = styled.h4``;
-const P = styled.p``;
+const H = styled.h4`
+@media screen and (max-width: 400px) {
+  font-size : 12px;
+}
+`;
+const P = styled.p`
+@media screen and (max-width: 400px) {
+  font-size : 10px;
+}
+`;
 export default Products;
 
