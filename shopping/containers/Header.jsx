@@ -3,16 +3,17 @@ import React from "react";
 import Link from "next/link";
 
 import styled from '@emotion/styled';
+import { Container, Headers, Layover, Navbar } from "./importedFiles";
 
 const Header = ({topic, content}) => {
 
   return (
     <>
-      <HeaderTag>
-        <Transparent>
-            <Nav>
+      <Headers>
+        <Layover>
+            <Navbar>
               <Container>
-                  <Navbar>
+                  <Container justifyContent="space-between" alignItems="center">
                       <NavbarRight>
                         <NavbarRightUl>
                           <Link href="/" style={{textDecoration:'none', color:"black"}}>
@@ -38,48 +39,20 @@ const Header = ({topic, content}) => {
                         </NavbarLeftUl>
                         <Img src="/Img/logo.png" alt="logoImg" />
                       </NavbarLeft>
-                  </Navbar>
+                  </Container>
                   <DescHeader>
                     <H>{topic}</H>
                     <P>{content}</P>
                   </DescHeader>
               </Container>
-            </Nav>
-        </Transparent>
-      </HeaderTag>
+            </Navbar>
+        </Layover>
+      </Headers>
     </>
   )
 }
 
-const HeaderTag = styled.header`
-  background-image: url("/Img/header.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 80vh;
-  position: relative;
-`
 
-const Transparent = styled.div`
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(255,255,255,.8);
-`
-const Nav = styled.nav`
-  width: 100%;
-  height: 70px;
-  background-color: rgba(0,0,0,.1);
-`
-
-const Container = styled.div`
-  display : flex;
-  width : 80%;
-  height : 100%;
-  margin : auto;
-`
 const NavbarRight = styled.div`
   display : flex;
 `
@@ -138,13 +111,6 @@ const NavbarLeftLi = styled.li`
   }
 `
 
-
-const Navbar = styled.div`
-  width : 100%;
-  display : flex;
-  justify-content : space-between;
-  align-items : center;
-`
 
 const Img = styled.img`
   width : 45px;

@@ -4,12 +4,14 @@ import styled from '@emotion/styled';
 
 import Link from "next/link";
 
+import { Container } from "./importedFiles";
+
 const Products = () => {
 
   return (
     <>
       <Section>
-            <Container>
+            <Container justifyContent="space-between">
                 <SectionRight>
                   <Layover>
                     <HSectionRight> نمونه محصولات پرفروش</HSectionRight>
@@ -63,13 +65,6 @@ const Section = styled.section`
   position : relative;
 `
 
-const Container = styled.div`
-  display : flex;
-  width : 80%;
-  height : 100%;
-  margin : auto;
-  justify-content : space-between;
-`
 
 const Layover = styled.div`
   position : absolute;

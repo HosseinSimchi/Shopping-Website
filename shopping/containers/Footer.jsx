@@ -2,13 +2,14 @@ import React from "react"
 
 import styled from "styled-components";
 
+import {Container} from "./importedFiles";
 
 const Footer = () => {
 
   return (
     <>
       <FooterSection>
-        <Container>
+        <Container position="relative" flexDirection="column">
             <TextSection>
               <H>فروشگاه اینترنتی خرید لباس</H>
               <P>شما میتوانید از طرق زیر با در ارتباط باشید و از جدیدترین محصولات ما باخبر شوید</P>
@@ -34,14 +35,7 @@ const FooterSection = styled.section`
   margin-top :10vh;
   background-color : rgba(0,0,0,0.1)
 `
-const Container = styled.div`
-  position: relative;
-  width : 80%;
-  margin: auto;
-  height : 100%;
-  display: flex;
-  flex-direction: column;
-`
+
 const TextSection = styled.div`
   text-align : center;
   width : 100%;
