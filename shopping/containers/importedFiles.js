@@ -8,3 +8,5 @@ export {default as Flexcontainer} from "../components/Flexcontainer/Flexcontaine
 export {default as Image} from "../components/Image/Image";
 export {default as DescContainer} from "../components/DescContainer/DescContainer";
 export {default as H1} from "../components/Typography/H1";
+export {default as P} from "../components/Typography/P";
+export {default as Section} from "../components/Section/Section";

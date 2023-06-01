@@ -4,15 +4,23 @@ import styled from '@emotion/styled';
 
 import Link from "next/link";
 
-import { Container } from "./importedFiles";
+import {css, jsx} from "@emotion/react";
+
+import { Container,Section, Layover} from "./importedFiles";
 
 const Products = () => {
 
   return (
     <>
-      <Section>
+      <Section marginTop='10vh' height="500px" position="relative">
             <Container justifyContent="space-between">
-                <SectionRight>
+                <Section width="60%" textAlign="center" backgroundImage="url('/Img/about1.jpg')"
+                  backgroundAttachment="fixed" position="absolute" top="0" right="0" 
+                  bottom="0" left="40%"  backgroundRepeat="no-repeat" backgroundSize="cover" css={css`
+                  @media screen and (max-width: 400px) {
+                    top : 10%;
+                    bottom:10%;
+                  }`}>
                   <Layover>
                     <HSectionRight> نمونه محصولات پرفروش</HSectionRight>
                     <PSectionRight> در این بخش چهار نمونه از پرفروش ترین کارها را برایتان قرار داده ایم ولی میتوانید با کلیک بر روی دکمه زیر محصولات بیشتری را نیز مشاهده کنید</PSectionRight>
@@ -20,7 +28,7 @@ const Products = () => {
                       <A href="#">دیدن محصولات بیشتر</A>
                     </Link>
                   </Layover>
-                </SectionRight>
+                </Section>
                 <SectionLeft>
                     <Ul>
                       <Li>
@@ -59,38 +67,9 @@ const Products = () => {
   )
 }
 
-const Section = styled.section`
-  margin-top : 10vh;
-  height : 500px;
-  position : relative;
-`
 
 
-const Layover = styled.div`
-  position : absolute;
-  top : 0;
-  right:0;
-  bottom:0;
-  left: 0;
-  background-color : rgba(255,255,255,0.85);
-`
-const SectionRight = styled.div`
-  width : 60%;
-  text-align : center;
-  background-image : url("Img/about1.jpg");
-  background-repeat : no-repeat;
-  background-size : cover;
-  background-attachment : fixed;
-  position: absolute;
-  top : 0;
-  right:0;
-  bottom:0;
-  left:40%;
-  @media screen and (max-width: 400px) {
-    top : 10%;
-    bottom:10%;
-  }
-`
+
 const SectionLeft = styled.div`
   width : 40%;
   position: absolute;

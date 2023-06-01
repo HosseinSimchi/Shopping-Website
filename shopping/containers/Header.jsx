@@ -4,9 +4,8 @@ import Link from "next/link";
 
 import {css, jsx} from "@emotion/react";
 
-import styled from '@emotion/styled';
 import { Container, Headers, Layover, Navbar, Unorderlist, Li, Flexcontainer,
-        Image, DescContainer, H1 } from "./importedFiles";
+        Image, DescContainer, H1, P } from "./importedFiles";
 
 const Header = ({topic, content}) => {
 
@@ -30,7 +29,7 @@ const Header = ({topic, content}) => {
                         <Unorderlist margin='0 5x 0 5px'>
                           {pages.map((item) => (
                             <Link href={item.url} style={{textDecoration:'none', color:"black"}}>
-                              <Li margin="0 15px" fontSize="18px" fontWeight="bold" css={css`
+                              <Li margin="0 15px" fontSize="17px" fontWeight="bold" css={css`
                                         @media screen and (max-width: 768px) {
                                           font-size : 15px;
                                           margin : 0 10px;
@@ -61,7 +60,7 @@ const Header = ({topic, content}) => {
                             }
                         `}>
                           {social.map((items) => (
-                            <Li margin="0 7px"><I className={items}></I></Li>
+                            <Li margin="0 7px"><i className={items}></i></Li>
                           ))}
                         </Unorderlist>
                         <Image src="/Img/logo.png" alt="logoImg" size="45px" />
@@ -69,7 +68,11 @@ const Header = ({topic, content}) => {
                   </Container>
                   <DescContainer>
                     <H1 marginButton="21px" opacity="0.7" fontSize="35px">{topic}</H1>
-                    <P>{content}</P>
+                    <P fontSize="20px" fontWeight="bold" opacity="0.7" css={css`
+                      @media screen and (max-width: 768px) {
+                        font-size : 15px;
+                        }
+                    `}>{content}</P>
                   </DescContainer>
               </Container>
             </Navbar>
@@ -80,14 +83,5 @@ const Header = ({topic, content}) => {
 }
 
 
-const P = styled.p`
-  font-size :20px;
-  font-weight : bold;
-  opacity : 0.7;
-  @media screen and (max-width: 768px) {
-    font-size : 15px;
-  }
-`
-const I = styled.i``
 export default Header;
 
