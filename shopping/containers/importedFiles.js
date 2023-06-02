@@ -10,3 +10,5 @@ export {default as DescContainer} from "../components/DescContainer/DescContaine
 export {default as H1} from "../components/Typography/H1";
 export {default as P} from "../components/Typography/P";
 export {default as Section} from "../components/Section/Section";
+export {default as Button} from "../components/Button/Button";
+export {default as H4} from "../components/Typography/H4";

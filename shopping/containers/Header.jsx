@@ -2,7 +2,6 @@ import React from "react";
 
 import Link from "next/link";
 
-import {css, jsx} from "@emotion/react";
 
 import { Container, Headers, Layover, Navbar, Unorderlist, Li, Flexcontainer,
         Image, DescContainer, H1, P } from "./importedFiles";
@@ -29,38 +28,15 @@ const Header = ({topic, content}) => {
                         <Unorderlist margin='0 5x 0 5px'>
                           {pages.map((item) => (
                             <Link href={item.url} style={{textDecoration:'none', color:"black"}}>
-                              <Li margin="0 15px" fontSize="17px" fontWeight="bold" css={css`
-                                        @media screen and (max-width: 768px) {
-                                          font-size : 15px;
-                                          margin : 0 10px;
-                                        }
-                                        @media screen and (max-width: 576px) {
-                                          font-size : 10px;
-                                          margin : 0 5px;
-                                        }
-                                        @media screen and (max-width: 400px) {
-                                          font-size : 6px;
-                                          margin : 0 2px;
-                                        }
-                              `}>{item.title}</Li>
+                              <Li name="navbar" margin="0 15px" fontSize="17px" fontWeight="bold">{item.title}</Li>
                             </Link>
                           ))}
                         </Unorderlist>
                       </Flexcontainer>
                       <Flexcontainer alignItems="center">
-                        <Unorderlist margin="0 30px" css={css`
-                            @media screen and (max-width: 768px) {
-                              margin : 0 25px;
-                            }
-                            @media screen and (max-width: 576px) {
-                              margin : 0 20px;
-                            }
-                            @media screen and (max-width: 400px) {
-                              margin : 0 5px;
-                            }
-                        `}>
+                        <Unorderlist margin="0 30px">
                           {social.map((items) => (
-                            <Li margin="0 7px"><i className={items}></i></Li>
+                            <Li name="navbar" margin="0 7px"><i className={items}></i></Li>
                           ))}
                         </Unorderlist>
                         <Image src="/Img/logo.png" alt="logoImg" size="45px" />
@@ -68,11 +44,7 @@ const Header = ({topic, content}) => {
                   </Container>
                   <DescContainer>
                     <H1 marginButton="21px" opacity="0.7" fontSize="35px">{topic}</H1>
-                    <P fontSize="20px" fontWeight="bold" opacity="0.7" css={css`
-                      @media screen and (max-width: 768px) {
-                        font-size : 15px;
-                        }
-                    `}>{content}</P>
+                    <P fontSize="20px" fontWeight="bold" opacity="0.7">{content}</P>
                   </DescContainer>
               </Container>
             </Navbar>
