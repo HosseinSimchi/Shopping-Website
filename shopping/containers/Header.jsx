@@ -28,7 +28,7 @@ const Header = ({topic, content}) => {
                         <Unorderlist margin='0 5x 0 5px'>
                           {pages.map((item) => (
                             <Link href={item.url} style={{textDecoration:'none', color:"black"}}>
-                              <Li name="navbar" margin="0 15px" fontSize="17px" fontWeight="bold">{item.title}</Li>
+                              <Li resFont9="12px" resMargin9="0 13px" resFont7="8px" resMargin7="0 13px" resFont5="8px" resMargin5="0 8px" resFont4="5px" resMargin4="0 5px" margin="0 15px" fontSize="17px" fontWeight="bold">{item.title}</Li>
                             </Link>
                           ))}
                         </Unorderlist>
@@ -36,7 +36,7 @@ const Header = ({topic, content}) => {
                       <Flexcontainer alignItems="center">
                         <Unorderlist margin="0 30px">
                           {social.map((items) => (
-                            <Li name="navbar" margin="0 7px"><i className={items}></i></Li>
+                            <Li resFont7="12px" resMargin7="0 7px" resFont5="8px" resMargin5="0 1px" resFont4="6px" resMargin4="0 2px" margin="0 15px" fontSize="17px"><i className={items}></i></Li>
                           ))}
                         </Unorderlist>
                         <Image src="/Img/logo.png" alt="logoImg" size="45px" />

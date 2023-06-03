@@ -2,12 +2,20 @@ import React from "react";
 
 import {css, jsx} from "@emotion/react";
 
-const H4 = ({children}) => {
+const H4 = ({children, fontSize='', marginBottom='', responsiveFont4='12px', responsiveFont5='', responsiveFont7=''}) => {
 
   return (
     <h4 css={css`
+      font-size: ${fontSize};
+      margin-bottom: ${marginBottom};
+      @media screen and (max-width: 768px) {
+        font-size :${responsiveFont7};
+      }
+      @media screen and (max-width: 576px) {
+        font-size : ${responsiveFont5};
+      }
       @media screen and (max-width: 400px) {
-        font-size : 8px;
+        font-size : ${responsiveFont4};
       }
     `}>
       {children}

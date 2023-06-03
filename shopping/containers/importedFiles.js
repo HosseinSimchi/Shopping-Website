@@ -12,3 +12,5 @@ export {default as P} from "../components/Typography/P";
 export {default as Section} from "../components/Section/Section";
 export {default as Button} from "../components/Button/Button";
 export {default as H4} from "../components/Typography/H4";
+export {default as Card} from "../components/Card/Card";
+export {default as H2} from "../components/Typography/H2";

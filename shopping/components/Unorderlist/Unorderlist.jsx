@@ -2,12 +2,14 @@ import React from 'react';
 
 import {css, jsx} from '@emotion/react';
 
-const Unorderlist = ({children, margin='', flexWrap=''}) => {
+const Unorderlist = ({children, margin='', flexWrap='', justifyContent='', width=''}) => {
 
   return (
     <ul css={css`
+      width: ${width};
       display : flex;
       list-style : none;
+      justify-content : ${justifyContent};
       margin : ${margin};
       flex-wrap : ${flexWrap};
       @media screen and (max-width: 768px) {

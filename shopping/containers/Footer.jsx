@@ -2,73 +2,33 @@ import React from "react"
 
 import styled from "styled-components";
 
-import {Container} from "./importedFiles";
+import {Container, Section, H4, P, Unorderlist, Li} from "./importedFiles";
 
 const Footer = () => {
 
   return (
     <>
-      <FooterSection>
+      <Section width="100%" height="250px" marginTop="10vh" backgroundColor="rgba(0,0,0,0.1)">
         <Container position="relative" flexDirection="column">
-            <TextSection>
-              <H>فروشگاه اینترنتی خرید لباس</H>
-              <P>شما میتوانید از طرق زیر با در ارتباط باشید و از جدیدترین محصولات ما باخبر شوید</P>
+            <Section width="100%" marginTop="30%" textAlign="center">
+              <H4 fontSize="30px" marginBottom="6px">فروشگاه اینترنتی خرید لباس</H4>
+              <P fontSize="20px">شما میتوانید از طرق زیر با در ارتباط باشید و از جدیدترین محصولات ما باخبر شوید</P>
               <P>------------------------------------------------------------------------------------</P>
-            </TextSection>
-            <Social>
-                <Ul >
-                  <Li><I className="fas fa-phone"></I></Li>
-                  <Li><I className="fa fa-telegram"></I></Li>
-                  <Li><I className="fa fa-instagram"></I></Li>
-                  <Li><I className="fa fa-envelope"></I></Li>
-                </Ul>
-            </Social>
+            </Section>
+            <Section width="100%">
+                <Unorderlist width="100%" justifyContent="center">
+                  <Li margin="0 12px"><i className="fas fa-phone"></i></Li>
+                  <Li margin="0 12px"><i className="fa fa-telegram"></i></Li>
+                  <Li margin="0 12px"><i className="fa fa-instagram"></i></Li>
+                  <Li margin="0 12px"><i className="fa fa-envelope"></i></Li>
+                </Unorderlist>
+            </Section>
         </Container>
-      </FooterSection>
+      </Section>
     </>
   )
 }
 
-const FooterSection = styled.section`
-  width : 100%;
-  height : 300px;
-  margin-top :10vh;
-  background-color : rgba(0,0,0,0.1)
-`
-
-const TextSection = styled.div`
-  text-align : center;
-  width : 100%;
-  margin-top : 10%;
-`
-
-const H = styled.h4`
-  font-size : 30px;
-  margin-bottom :6px;
-  @media screen and (max-width: 400px) {
-    font-size : 20px;
-  }
-`
-const P = styled.p`
-  font-size :20px;
-  @media screen and (max-width: 400px) {
-    font-size : 15px;
-  }
-`
-const Social = styled.div`
-  width : 100%;
-`
-const Ul = styled.ul`
-  width : 100%;
-  display : flex;
-  list-style : none;
-  justify-content : center;
-`
-const Li = styled.li`
-  margin : 0 12px;
-`
-
-const I = styled.i``
 
 
 export default Footer;
