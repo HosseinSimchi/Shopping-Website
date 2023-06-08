@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "storybook": "start-storybook"
   },
   "dependencies": {
     "@emotion/core": "^11.0.0",
@@ -19,6 +20,9 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.22.1",
+    "@storybook/react": "^7.0.20",
+    "babel-loader": "^9.1.2",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "prettier": "2.8.8",

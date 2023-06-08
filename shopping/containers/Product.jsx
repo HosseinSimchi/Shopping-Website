@@ -36,10 +36,10 @@ const Products = () => {
                       {dataJson.map((item, index) => (
                           index <= 3 ? (
                           <Li width="50%" margin="50px 0" textAlign="center" name="products">
-                            <Link href={`/products/product/${index+1}`} style={{textDecoration:'none', color:"black"}}>
-                                <Image src={`${item.ImgUTL}`} alt={`${index}`} width="100px" height="100px"/>
-                                <H4>{item.name}</H4>
-                                <P fontSize="20px">{item.value}</P>
+                            <Link href={`/products/product/${index+1}`} style={{textDecoration:'none', color:"black"}}> 
+                                <Image src={`${item.ImgUTL}`} alt={`${index}`} width="100px" height='100px' resWidth9='80px' resHeight9='80px' resWidth7='60px' resHeight7='60px' resWidth5='50px' resHeight5='50px' resWidth4='40px' resHeight4='40px'/>
+                                <H4 responsiveFont4='6px' responsiveFont5='8px' responsiveFont7='10px'>{item.name}</H4>
+                                <P fontSize="15px" responsiveFont5='7px' responsiveFont4='6px' responsivePad4='2px'>{item.value}</P>
                             </Link>
                           </Li>
                           )

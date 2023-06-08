@@ -10,7 +10,7 @@ const Footer = () => {
     <>
       <Section width="100%" height="250px" marginTop="10vh" backgroundColor="rgba(0,0,0,0.1)">
         <Container position="relative" flexDirection="column">
-            <Section width="100%" marginTop="30%" textAlign="center">
+            <Section width="100%" marginTop="10%" textAlign="center">
               <H4 fontSize="30px" marginBottom="6px">فروشگاه اینترنتی خرید لباس</H4>
               <P fontSize="20px">شما میتوانید از طرق زیر با در ارتباط باشید و از جدیدترین محصولات ما باخبر شوید</P>
               <P>------------------------------------------------------------------------------------</P>
