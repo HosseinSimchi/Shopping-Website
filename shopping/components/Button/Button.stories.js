@@ -4,7 +4,7 @@ import Button from './Button';
 
 export default {title : "Button"};
 
-export const Button = () => <Button> سلام دنیا </Button>
+export const button = () => <Button> سلام دنیا </Button>
 
 
 

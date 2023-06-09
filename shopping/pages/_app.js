@@ -1,6 +1,8 @@
 import React,{useState, useEffect} from 'react';
 
 import './global.css';
+import {ThemeProvider} from '@emotion/react';
+import theme from '@/configs/theme';
 
 export default function MyApp({ Component, pageProps }) {
   const [showChild, setShowChild] = useState(false);
@@ -16,7 +18,9 @@ export default function MyApp({ Component, pageProps }) {
     return <></>;
   } else {
     return (
+      <ThemeProvider theme={theme}>
         <Component {...pageProps} />
+      </ThemeProvider>
     );
   }
 }
