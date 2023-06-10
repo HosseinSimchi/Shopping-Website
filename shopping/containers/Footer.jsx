@@ -1,7 +1,5 @@
 import React from "react"
 
-import styled from "styled-components";
-
 import {Container, Section, H4, P, Unorderlist, Li} from "./importedFiles";
 
 const Footer = () => {

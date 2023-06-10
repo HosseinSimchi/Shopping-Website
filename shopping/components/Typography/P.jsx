@@ -1,6 +1,6 @@
 import React from "react";
 
-import {css, jsx} from '@emotion/react';
+import {css} from '@emotion/react';
 
 const P = ({children, fontSize='', fontWeight='', opacity='', lineHeight=''
             , margin='', width='', responsiveFont4='9px',responsiveFont5=''

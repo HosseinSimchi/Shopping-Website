@@ -1,8 +1,5 @@
-/** @jsx jsx */
-import React from "react";
-
-
-import {css, jsx} from '@emotion/react';
+import React from 'react'
+import {css} from '@emotion/react';
 
 const Button = ({children, href='#', fontSize='', responsiveFont4='10px', responsiveFont5='', responsivePad4=''}) => {
 

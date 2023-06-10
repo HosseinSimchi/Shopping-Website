@@ -1,3 +1,4 @@
+/** @jsx */
 /** @type { import('@storybook/nextjs').StorybookConfig } */
 const config = {
     stories: [

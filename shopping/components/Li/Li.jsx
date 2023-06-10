@@ -1,7 +1,6 @@
-/** @jsx jsx */
 import React from 'react';
 
-import {css, jsx} from '@emotion/react';
+import {css} from '@emotion/react';
 
 
 const Li = ({children,listStyle='', margin='', fontSize='', fontWeight='', textAlign='', width='',

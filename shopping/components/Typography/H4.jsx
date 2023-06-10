@@ -1,6 +1,6 @@
 import React from "react";
 
-import {css, jsx} from "@emotion/react";
+import {css} from "@emotion/react";
 
 const H4 = ({children, fontSize='', marginBottom='', responsiveFont4='12px', responsiveFont5='', responsiveFont7=''}) => {
 

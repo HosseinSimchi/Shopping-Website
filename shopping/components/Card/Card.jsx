@@ -1,7 +1,6 @@
-/** @jsx jsx */
 import React from 'react';
 
-import {css, jsx } from '@emotion/react';
+import {css} from '@emotion/react';
 
 const Card = ({children, padding='12px', width='20%' , height='315px',
                 margin='2px 5px', resWidth4='25%', resWidth5='20%', resWidth7='20%',

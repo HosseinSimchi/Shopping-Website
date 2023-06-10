@@ -1,7 +1,6 @@
-/** @jsx jsx */
 import React from "react";
 
-import {css, jsx} from '@emotion/react';
+import {css} from '@emotion/react';
 
 const H1 = ({children, fontSize='', marginButton='', opacity='', marginTop=''}) => {
 
