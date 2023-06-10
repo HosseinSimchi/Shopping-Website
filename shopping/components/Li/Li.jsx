@@ -1,15 +1,17 @@
+/** @jsx jsx */
 import React from 'react';
 
 import {css, jsx} from '@emotion/react';
 
 
-const Li = ({children, margin='', fontSize='', fontWeight='', textAlign='', width='',
+const Li = ({children,listStyle='', margin='', fontSize='', fontWeight='', textAlign='', width='',
               resFont9='', resMargin9='', resFont4='', resFont5='',resFont7='',resMargin4='',resMargin5='',resMargin7=''}) => {
 
   return (
 <li css={css`
       width: ${width};
       margin : ${margin};
+      list-style : ${listStyle};
       font-size : ${fontSize};
       font-weight : ${fontWeight};
       text-align : ${textAlign};
