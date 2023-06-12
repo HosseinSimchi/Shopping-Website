@@ -1,11 +1,15 @@
-/** @jsx */
+/** @jsx jsx */
 import './styles.css';
 import { withThemeFromJSXProvider } from '@storybook/addon-styling';
-import { Global, css } from '@emotion/react';
+import { Global, css, jsx} from '@emotion/react';
 
 const GlobalStyles = () => (
   <Global
-    css={css``}
+    styles={css`
+      body {
+        font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      }
+    `}
   />
 );
 

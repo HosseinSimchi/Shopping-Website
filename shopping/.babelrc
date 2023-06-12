@@ -4,8 +4,9 @@
       "next/babel",
       {
         "preset-react": {
-          "runtime": "automatic",
-          "importSource": ["@emotion/react"]
+          "runtime" : "automatic",
+          "importSource": ["@emotion/react"],
+          "throwIfNamespace": false
         }
       }
     ]

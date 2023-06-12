@@ -1,4 +1,4 @@
-import React from "react";
+/** @jsx */
 
 import {css} from "@emotion/react";
 

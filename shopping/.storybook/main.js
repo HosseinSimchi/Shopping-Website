@@ -1,5 +1,6 @@
-/** @jsx */
+/** @jsx jsx*/
 /** @type { import('@storybook/nextjs').StorybookConfig } */
+import * as path from 'path';
 const config = {
     stories: [
         '../components/**/*.mdx',
@@ -9,11 +10,11 @@ const config = {
         '@storybook/addon-links',
         '@storybook/addon-essentials',
         '@storybook/addon-interactions',
-        '@storybook/addon-styling'
+        '@storybook/addon-styling',
     ],
     framework: {
         name: '@storybook/nextjs',
-        options: {},
+        options: {nextConfigPath: path.resolve(__dirname, '../next.config.js'),},
     },
     docs: {
         autodocs: 'tag',
