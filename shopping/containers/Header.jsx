@@ -13,9 +13,8 @@ const Header = ({topic, content}) => {
     {title:'فروشگاه', url:'/products'},
     {title:'درباره ما', url:'/about'},
     {title:'تماس با ما', url:'/contact'},
+    {title:'ورود', url:'/login'},
   ];
-
-  const social = ["fas fa-phone","fa fa-telegram", "fa fa-instagram", "fa fa-envelope"]
 
   return (
     <>
@@ -35,9 +34,8 @@ const Header = ({topic, content}) => {
                       </Flexcontainer>
                       <Flexcontainer alignItems="center">
                         <Unorderlist margin="0 30px">
-                          {social.map((items) => (
-                            <Li resFont7="12px" resMargin7="0 7px" resFont5="8px" resMargin5="0 1px" resFont4="6px" resMargin4="0 2px" margin="0 15px" fontSize="17px"><i className={items}></i></Li>
-                          ))}
+                          <Li resFont7="12px" resMargin7="0 7px" resFont5="8px" resMargin5="0 1px" resFont4="6px" resMargin4="0 2px" margin="0 15px" fontSize="17px"><i className="fas fa-phone"></i></Li>
+                          <Li resFont7="12px" resMargin7="0 7px" resFont5="8px" resMargin5="0 1px" resFont4="6px" resMargin4="0 2px" margin="0 15px" fontSize="17px"><div style={{display:"flex"}}><i className="fa fa-shopping-cart"></i><p style={{margin:"5px -24.5px", fontSize:"12px", fontWeight:"bold"}}>0</p></div></Li>
                         </Unorderlist>
                         <Image src="/Img/logo.png" alt="logoImg" size="45px" />
                       </Flexcontainer>
