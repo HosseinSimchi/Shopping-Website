@@ -1,16 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
 import styled from "@emotion/styled";
+import { useSelector } from "react-redux";
 
 const page = () => {
+  const auth = useSelector(state => state.auth);
+
+  const [emailValue, setEmailValue] = useState()
+  
+  useEffect(() => {
+    if (auth.email) setEmailValue(auth.email)
+    else setEmailValue("")
+  },[])
 
   return (
     <>
       <Section>
         <Form>
           <Label>ایمیل</Label>
-          <Input type="email" placeholder="ایمیل"/>
+          <Input type="email" placeholder="ایمیل" value={`${emailValue}`}/>
           <Button type="submit">وارد شوید</Button>
           <Link href="/register" style={{textDecoration:'none'}}>
             <P>هنوز ثبت نام نکرده اید؟ ثبت نام کنید</P>

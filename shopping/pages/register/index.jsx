@@ -1,20 +1,40 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-
 import styled from "@emotion/styled";
+import { useDispatch, useSelector } from "react-redux";
+import { useRouter } from "next/router";
 
 const page = () => {
+  const [regInfo, setRegInfo] = useState({})
+  const dispatch = useDispatch();
+  const router = useRouter();
+  const auth = useSelector(state => state.auth);
+
+  const submitHandler =(event) => {
+    event.preventDefault();
+    dispatch({
+      type : "REGISTER",
+      name : regInfo.name,
+      family : regInfo.family,
+      email: regInfo.email
+    })
+    router.push('/login')
+  }
+
+  const onChangeHandler = (name, event) => {
+    setRegInfo({...regInfo, [name] : event.target.value})
+  }
 
   return (
     <>
       <Section>
-        <Form>
+        <Form onSubmit={submitHandler}>
           <Label>نام</Label>
-          <Input type="text" placeholder="نام"/>
+          <Input type="text" placeholder="نام" onChange={() => {onChangeHandler("name", event)}}/>
           <Label>نام خانوادگی</Label>
-          <Input type="text" placeholder="نام خانوادگی"/>
+          <Input type="text" placeholder="نام خانوادگی" onChange={() => {onChangeHandler("family", event)}}/>
           <Label>ایمیل</Label>
-          <Input type="email" placeholder="ایمیل"/>
+          <Input type="email" placeholder="ایمیل" onChange={() => {onChangeHandler("email", event)}}/>
           <Button type="submit"> ثبت نام کنید</Button>
           <Link href="/login" style={{textDecoration:'none'}}>
             <P>آیا حساب کاربری دارید؟ وارد شوید</P>
