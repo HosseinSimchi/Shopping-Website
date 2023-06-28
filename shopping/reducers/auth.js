@@ -6,6 +6,7 @@ const auth = (state=[], action) => {
         name : action.name,
         family : action.family,
         email : action.email,
+        loading : action.loading,
       }
     default:
       return state

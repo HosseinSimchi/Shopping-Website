@@ -2,22 +2,38 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
 import styled from "@emotion/styled";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { useRouter } from "next/router";
 
 const page = () => {
   const auth = useSelector(state => state.auth);
 
   const [emailValue, setEmailValue] = useState()
-  
+  const router = useRouter();
+  const dispatch = useDispatch();
+
   useEffect(() => {
     if (auth.email) setEmailValue(auth.email)
     else setEmailValue("")
   },[])
 
+  const onSubmitHandler = (event) => {
+    event.preventDefault()
+    dispatch ({
+      type : "REGISTER",
+      email : auth.email,
+      name : auth.name,
+      family : auth.family,
+      loading : true
+    })
+    console.log(auth);
+    router.push('/')
+  }
+
   return (
     <>
       <Section>
-        <Form>
+        <Form onSubmit={onSubmitHandler}>
           <Label>ایمیل</Label>
           <Input type="email" placeholder="ایمیل" value={`${emailValue}`}/>
           <Button type="submit">وارد شوید</Button>

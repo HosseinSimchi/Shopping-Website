@@ -1,21 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Link from "next/link";
-
+import {useSelector} from "react-redux";
 
 import { Container, Headers, Layover, Navbar, Unorderlist, Li, Flexcontainer,
         Image, DescContainer, H1, P } from "./importedFiles";
 
 const Header = ({topic, content}) => {
+  const auth = useSelector(state => state.auth);
 
   const pages = [
     {title:'صفحه اصلی', url:'/'},
     {title:'فروشگاه', url:'/products'},
     {title:'درباره ما', url:'/about'},
     {title:'تماس با ما', url:'/contact'},
-    {title:'ورود', url:'/login'},
+
   ];
 
+  useEffect(()=> {
+    console.log(auth);
+  },[])
   return (
     <>
       <Headers>
@@ -25,11 +29,20 @@ const Header = ({topic, content}) => {
                   <Container justifyContent="space-between" alignItems="center">
                       <Flexcontainer>
                         <Unorderlist margin='0 5x 0 5px'>
+
                           {pages.map((item) => (
                             <Link href={item.url} style={{textDecoration:'none', color:"black"}}>
                               <Li resFont9="12px" resMargin9="0 13px" resFont7="8px" resMargin7="0 13px" resFont5="8px" resMargin5="0 8px" resFont4="5px" resMargin4="0 5px" margin="0 15px" fontSize="17px" fontWeight="bold">{item.title}</Li>
                             </Link>
                           ))}
+                          {
+                            auth.loading != true ? 
+                              <Link href='/login' style={{textDecoration:'none', color:"black"}}>
+                                <Li resFont9="12px" resMargin9="0 13px" resFont7="8px" resMargin7="0 13px" resFont5="8px" resMargin5="0 8px" resFont4="5px" resMargin4="0 5px" margin="0 15px" fontSize="17px" fontWeight="bold">ورود</Li>
+                              </Link>
+                              :
+                              <Li resFont9="12px" resMargin9="0 13px" resFont7="8px" resMargin7="0 13px" resFont5="8px" resMargin5="0 8px" resFont4="5px" resMargin4="0 5px" margin="0 15px" fontSize="17px" fontWeight="bold"> <span style={{color:'#435B66'}}>سلام {auth.name}!</span></Li>
+                          }
                         </Unorderlist>
                       </Flexcontainer>
                       <Flexcontainer alignItems="center">

@@ -16,7 +16,8 @@ const page = () => {
       type : "REGISTER",
       name : regInfo.name,
       family : regInfo.family,
-      email: regInfo.email
+      email: regInfo.email,
+      loading : false,
     })
     router.push('/login')
   }
